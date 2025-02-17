@@ -3,11 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor</title>
+    <title>Conversor de Doc/PDF</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image:  url(background/tenis.jpg);
+        }
+    .CONTEINER{
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+    }
+    h1{
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: white;
+    }     
+.OVER{
+    border: 2px dashed #007bff;
+    padding: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}.OVER p {
+    color: #f8f8f8;
+    font-size: 16px;
+}
+input[type="file"]{
+    display: none;
+}
+.conversor{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.conversor:hover{
+    background-color: #004da0;
+}
+.conversor:disabled{
+background-color: #cccccc;
+cursor: not-allowed;
+}
+.lista-arquivos{
+    margin-top: 20px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+li{
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+}
+h3{
+    color: white;
+}
+    </style>
 </head>
 <body>
     
-</body>
-<script src="script.js"></script>
+<div class="CONTEINER">
+    <H1>Conversor de Arquivos</H1>
+<div id="Drop" class="OVER">
+    <p>Arraste os arquivos aqui ou clique para selecionar</p>
+    <input type="file" id="Arquivo" multiple>
+</div>
+<button id="convert" class="conversor">Converta Arquivos</button>
+<div id="file-list" class="lista-arquivos">
+    <h3>Arquivos Selecionados:</h3>
+    <ul id="files"></ul>
+</div>
+</div>
 
+</body>
+<script>
+    const OVER = document.getElementById("drop");
+    const arquivo = document.getElementById("arquivo");
+    const conversor = document.getElementById("convert")
+</script>
 </html>
