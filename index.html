@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Conversor de Doc/PDF</title>    
 </head>
 <body>
-    <div class="box-nav">
-        <h2>FlipDoc</h2>
-        <br>
-    </div> 
-<div class="CONTEINER">
-    <H1>Conversor de Arquivos</H1>
-<div id="Drop" class="OVER">
-    <p>Arraste os arquivos aqui ou clique para selecionar</p>
-    <input type="file" id="Arquivo" multiple>
-</div>
-<button id="convert" class="conversor">Converta Arquivos</button>
-<div id="file-list" class="lista-arquivos">
-    <h3>Arquivos Selecionados:</h3>
-    <ul id="files"></ul>
-</div>
-</div>
+    <div class="container">
+        <h1>Conversor Doc para Pdf</h1>
+        <p>arraste e solte arquivos DOC ou clique para selecionar</p>
 
+        <form>
+            <div class="upload-area" id="uploadarea">
+                <p>Arraste seus arquivos aqui</p>   
+            <input type="file" id="file-input" multiple accept=".doc, .docx">
+            </div>
+            <button type="submit">Converter</button>
+        </form>
+    </div>
 </body>
-<script src="script.js"></script>
+<script src="script.js">
+    
+</script>
 </html>
